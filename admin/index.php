@@ -12,7 +12,8 @@
             $adminname = $admindata['user_name'];
             $adminemail = $admindata['user_email'];
         }
-    }else if(!isset($_SESSION["admin_id"])){
+    }
+    if(!isset($_SESSION["admin_id"])){
         header("Location: ../home.php");  
         exit();
     }

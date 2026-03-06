@@ -142,8 +142,8 @@
                     </ul>
                     <div class="right d-flex align-items-center">
                         <div class="d-flex align-items-center me-3 " style="border: 1px solid #747474; padding: 3px 5px; border-radius: 5px; color: black;">
-                            <form>
-                                <input class="" type="text" placeholder="Search items....." style="border: none; outline: none; background: none;">
+                            <form action="product.php" method="post">
+                                <input name="getdata" type="text" placeholder="Search items....." style="border: none; outline: none; background: none;">
                             </form>
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
@@ -157,9 +157,6 @@
                         <div class="userboxxxxx ">
                             
                         </div>
-                         
-                            
-                        
                     </div>
                     
                 </div>

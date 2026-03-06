@@ -118,22 +118,25 @@
                 <div class="row">
                     <div class="categorybox col-lg-3">
                         <h3 class="filter">Filter</h3>
-                        <form action="" method="get">
-                        <label for="search">Search</label><br>
-                        <div class="input-group mb-3">
-                            <input type="text" id="search" class="form-control" placeholder="Search items....." aria-label="Recipient’s username" aria-describedby="button-addon2">
-                        </div>
-                        <label for="category">Category</label><br>
-                        <select id="category" class="form-select" aria-label="Default select example" onchange="this.form.submit()">
-                            <option value="">All Category</option>
-                            <?php 
-                                $getcategory = "SELECT *FROM category";
-                                $getcatdata = mysqli_query($conn, $getcategory);
-                                while($prodata = mysqli_fetch_array($getcatdata)):
-                            ?>
-                                <option value="<?php echo $prodata['cat_id']; ?>" class="select"><?php echo $prodata['cat_name']; ?></option>
-                            <?php endwhile ?>
-                        </select>
+                        <form action="" method="post">
+                            <label for="search">Search</label><br>
+                            <div class="input-group mb-3">
+                                <input type="text" name="getdata" class="form-control" placeholder="Search items....." aria-label="Recipient’s username" aria-describedby="button-addon2">
+                            </div>
+                        </form>
+                        <form action="" method="post">
+                            <label for="category">Category</label><br>
+                            <select id="category" name="cat_id" class="form-select" aria-label="Default select example">
+                                <option value="">All Category</option>
+                                <?php 
+                                    $getcategory = "SELECT *FROM category";
+                                    $getcatdata = mysqli_query($conn, $getcategory);
+                                    while($prodata = mysqli_fetch_array($getcatdata)):
+                                ?>
+                                    <option value="<?php echo $prodata['cat_id']; ?>" class="select"><?php echo $prodata['cat_name']; ?></option>
+                                <?php endwhile ?>
+                            </select>
+                            <input type="submit" value="search" name="save" class="mt-1 btn btn-warning text-light">
                         </form>
                     </div>
                     <!-- category section end -->
@@ -141,13 +144,79 @@
                         <!-- card section start -->
                         <div class="row">
                             <?php
-                            
-                                $getproduct = "SELECT * FROM product";
-                                $getprodata = mysqli_query($conn, $getproduct);
-                                while($prodata = mysqli_fetch_array($getprodata)):
+                                if(isset($_POST['getdata'])){
+                                    $getdata = $_POST['getdata'];
+                                    $data1 = "SELECT * FROM product WHERE pro_name LIKE '%$getdata%';";
+                                    $res33 = mysqli_query($conn, $data1);
+                                    while($prodata3 = mysqli_fetch_array($res33)){
                             ?>
                                 <div class="col-lg-4 col-md-4">
                                     <div class="card">
+                                        <img src="./projectphoto/<?php echo $prodata3['pro_img']; ?>" class="card-img-top" alt="..." style="height: 250px;">
+                                        <div class="cardbox">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="title card-title"><?php echo $prodata3['pro_name']; ?></p>
+                                                <button onclick="heart(this, '<?php echo $prodata3['pro_img']; ?>', '<?php echo $prodata3['pro_name']; ?>', <?php echo $prodata3['pro_weight']; ?>, <?php echo $prodata3['pro_price']; ?> , <?php echo $prodata3['pro_id']; ?> )" class="proheart"><i class="fa-solid fa-heart"></i></button>
+                                            </div>
+                                            <p class="text card-text" style="font-size: 12px;"><?php echo $prodata3['pro_des']; ?></p>
+                                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;"><?php echo $prodata3['pro_weight']; ?> </span>g</p>
+                                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> <?php echo $prodata3['pro_price']; ?> </span><span>mmk</span></p>
+                                            <button class="addtocart" onclick="addtocart('<?php echo $prodata3['pro_img']; ?>' , '<?php echo $prodata3['pro_name']; ?>' , <?php echo $prodata3['pro_weight']; ?> , <?php echo $prodata3['pro_price']; ?> , <?php echo $prodata3['pro_id']; ?>)">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <?php }else if(isset($_POST['save'])){   
+                                $cat_id = $_POST['cat_id'];
+                                if($cat_id == ""){
+                                    $getproduct = "SELECT * FROM product";
+                                    $getprodata = mysqli_query($conn, $getproduct);
+                                    while($prodata = mysqli_fetch_array($getprodata)){
+                                ?>
+                                    <div class="col-lg-4 col-md-4">
+                                         <div class="card">
+                                            <img src="./projectphoto/<?php echo $prodata['pro_img']; ?>" class="card-img-top" alt="..." style="height: 250px;">
+                                            <div class="cardbox">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p class="title card-title"><?php echo $prodata['pro_name']; ?></p>
+                                                    <button onclick="heart(this, '<?php echo $prodata['pro_img']; ?>', '<?php echo $prodata['pro_name']; ?>', <?php echo $prodata['pro_weight']; ?>, <?php echo $prodata['pro_price']; ?> , <?php echo $prodata['pro_id']; ?> )" class="proheart"><i class="fa-solid fa-heart"></i></button>
+                                                </div>
+                                                <p class="text card-text" style="font-size: 12px;"><?php echo $prodata['pro_des']; ?></p>
+                                                <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;"><?php echo $prodata['pro_weight']; ?> </span>g</p>
+                                                <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> <?php echo $prodata['pro_price']; ?> </span><span>mmk</span></p>
+                                                <button class="addtocart" onclick="addtocart('<?php echo $prodata['pro_img']; ?>' , '<?php echo $prodata['pro_name']; ?>' , <?php echo $prodata['pro_weight']; ?> , <?php echo $prodata['pro_price']; ?> , <?php echo $prodata['pro_id']; ?>)">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php }}else{
+                                        
+                                        $getcatid = "SELECT product.*, category.cat_name FROM product LEFT JOIN category ON product.cat_id = category.cat_id WHERE product.cat_id = $cat_id;"; 
+                                        $getcat = mysqli_query($conn , $getcatid);
+                                        $i = 1;
+                                        while($prodata = mysqli_fetch_array($getcat)){
+                                    ?>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="card">
+                                            <img src="./projectphoto/<?php echo $prodata['pro_img']; ?>" class="card-img-top" alt="..." style="height: 250px;">
+                                            <div class="cardbox">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p class="title card-title"><?php echo $prodata['pro_name']; ?></p>
+                                                    <button onclick="heart(this, '<?php echo $prodata['pro_img']; ?>', '<?php echo $prodata['pro_name']; ?>', <?php echo $prodata['pro_weight']; ?>, <?php echo $prodata['pro_price']; ?> , <?php echo $prodata['pro_id']; ?> )" class="proheart"><i class="fa-solid fa-heart"></i></button>
+                                                </div>
+                                                <p class="text card-text" style="font-size: 12px;"><?php echo $prodata['pro_des']; ?></p>
+                                                <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;"><?php echo $prodata['pro_weight']; ?> </span>g</p>
+                                                <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> <?php echo $prodata['pro_price']; ?> </span><span>mmk</span></p>
+                                                <button class="addtocart" onclick="addtocart('<?php echo $prodata['pro_img']; ?>' , '<?php echo $prodata['pro_name']; ?>' , <?php echo $prodata['pro_weight']; ?> , <?php echo $prodata['pro_price']; ?> , <?php echo $prodata['pro_id']; ?>)">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <?php }}} else{
+                                $getproduct = "SELECT * FROM product";
+                                $getprodata = mysqli_query($conn, $getproduct);
+                                while($prodata = mysqli_fetch_array($getprodata)){
+                            ?>
+                                <div class="col-lg-4 col-md-4">
+                                     <div class="card">
                                         <img src="./projectphoto/<?php echo $prodata['pro_img']; ?>" class="card-img-top" alt="..." style="height: 250px;">
                                         <div class="cardbox">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -161,7 +230,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            <?php endwhile ?>
+                            <?php }} ?>
                         </div>
                         <!-- addtocart section start -->
                             <div class="card d-none w-25 text-center position-fixed top-50 start-50 translate-middle p-4 shadow-lg" id="box">
@@ -177,21 +246,7 @@
                         <!-- card section end -->
                     </div>
                 </div>
-                <!-- <div class="row ">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="d-flex justify-content-center">
-                            <nav aria-label="Page navigation example" class="mx-auto m-4">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
         <!-- Product section end -->
 

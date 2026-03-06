@@ -12,6 +12,10 @@
             $adminemail = $admindata['user_email'];
         }
     }
+    if(!isset($_SESSION["admin_id"])){
+        header("Location: ../home.php");  
+        exit();
+    }
 ?>
 <!doctype html>
 <html lang="en">

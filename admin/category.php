@@ -12,7 +12,10 @@
             $adminemail = $admindata['user_email'];
         }
     }
-    
+    if(!isset($_SESSION["admin_id"])){
+        header("Location: ../home.php");  
+        exit();
+    }
 
     if(isset($_POST['save'])){
         $cat_name = $_POST['cat_name'];

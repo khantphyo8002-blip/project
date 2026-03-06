@@ -12,6 +12,10 @@
             $adminemail = $admindata['user_email'];
         }
     }
+    if(!isset($_SESSION["admin_id"])){
+        header("Location: ../home.php");  
+        exit();
+    }
 
     if(isset($_POST['save'])){
         $uname = $_POST['uname'];
