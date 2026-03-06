@@ -1,3 +1,6 @@
+<?php
+    include("db.php");
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -132,37 +135,66 @@
                             </div>
                             <div class="ptable my-4">
                                 <table class="table table-bordered table-striped ">
-                                    <thead>
+                                    <thead class="align-middle">
                                         <tr>
                                             <th>No</th>
-                                            <th>ID</th>
-                                            <th>Date</th>
+                                            <th>
+                                                <div class="text-center">ORD</div>
+                                                <div class="text-center">ID</div>
+                                            </th>
+                                            <th>ORD_Date</th>
                                             <th>Cus_Nmae</th>
-                                            <th>Phone</th>
+                                            <th>Cus_Phone</th>
                                             <th>Address</th>
                                             <th>Pro_Name</th>
                                             <th>Qty</th>
+                                            <th>Amount</th>
                                             <th>Subtotal</th>
-                                            <th>final total</th>
+                                            <th>
+                                                <div class="text-center">Final Total</div>
+                                                <div>tax2% &</div>
+                                                <div>delivered</div>
+                                            </th>
                                             <th>Actoin</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>27/2/2026</td>
-                                            <td>Mg Mg</td>
-                                            <td>09 987654321</td>
-                                            <td>Yangon</td>
-                                            <td>peanut</td>
-                                            <td>2</td>
-                                            <td>10000</td>
-                                            <td>20000</td>
-                                            <td>
-                                                <a href="" class="btn btn-outline-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                    <tbody class="align-middle">
+                                        <?php
+                                            $sql = "SELECT  orders.ord_id, 
+                                                            orders.ord_date, 
+                                                            user.user_name , 
+                                                            user.user_phone , 
+                                                            user.user_address , 
+                                                            product.pro_name , 
+                                                            orders.item_total , 
+                                                            orders_product.qty , 
+                                                            orders_product.amount,
+                                                            orders.final_total 
+                                                    FROM orders_product
+                                                    LEFT JOIN product ON product.pro_id = orders_product.pro_id
+                                                    LEFT JOIN orders ON orders.ord_id = orders_product.ord_id
+                                                    LEFT JOIN user ON user.user_id = orders.user_id; ";
+                                            $i = 1;
+                                            $res = mysqli_query($conn, $sql);
+                                            while($orddata = mysqli_fetch_array($res)):
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $i++ ?></td>
+                                                <td><?php echo $orddata['ord_id'] ?></td>
+                                                <td><?php echo $orddata['ord_date'] ?></td>
+                                                <td><?php echo $orddata['user_name'] ?></td>
+                                                <td><?php echo $orddata['user_phone'] ?></td>
+                                                <td><?php echo $orddata['user_address'] ?></td>
+                                                <td><?php echo $orddata['pro_name'] ?></td>
+                                                <td><?php echo $orddata['qty'] ?></td>
+                                                <td><?php echo $orddata['amount'] ?></td>
+                                                <td><?php echo $orddata['item_total'] ?></td>
+                                                <td class="text-danger"><?php echo $orddata['final_total'] ?></td>
+                                                <td>
+                                                    <a href="order_del.php?id=<?php echo $orddata['ord_id'] ?>" class="btn btn-outline-danger">Delete</a>
+                                                </td>
+                                            </tr>
+                                        <?php endwhile ?>
                                     </tbody>
                                 </table>
                             </div>

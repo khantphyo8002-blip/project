@@ -135,7 +135,7 @@ include("db.php");
                             </div>
                             <div class="ptable my-4">
                                 <table class="table table-bordered table-striped ">
-                                    <thead>
+                                    <thead class="align-middle">
                                         <tr>
                                             <th>No</th>
                                             <th>ID</th>
@@ -144,7 +144,7 @@ include("db.php");
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="align-middle">
                                         <?php
                                             $getrev = "SELECT review.*, user.user_name FROM review LEFT JOIN user ON review.user_id = user.user_id;";
                                             $getdata = mysqli_query($conn, $getrev);

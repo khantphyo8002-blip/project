@@ -222,7 +222,7 @@
                             </div><hr>
                             <div class="ptable my-4">
                                 <table class="table table-bordered table-striped ">
-                                    <thead>
+                                    <thead class="align-middle">
                                         <tr>
                                             <th>No</th>
                                             <th>Balance ID</th>
@@ -234,7 +234,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="align-middle">
                                         <?php
                                             if(isset($_POST['search'])){
                                                 $cat_id = $_POST['cat'];

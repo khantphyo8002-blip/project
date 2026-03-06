@@ -173,7 +173,7 @@
                             </div>
                             <div class="ptable my-4">
                                 <table class="table table-bordered table-striped ">
-                                    <thead>
+                                    <thead class="align-middle">
                                         <tr>
                                             <th>No</th>
                                             <th>Category ID</th>
@@ -181,7 +181,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="align-middle">
 
                                     <?php
                                         $getcategorydata = "SELECT * FROM category";
