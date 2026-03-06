@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+:root{
+    --maincolor: #ff8800;
+    --navcolor: #747474;
+    --whitecolor: #ffffff;
+    --shadowblack: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Active color style */
+    .dashboard-page .link[href*="index"],
+    .users-page .link[href*="users"],
+    .product-page .link[href*="product"],
+    .category-page .link[href*="category"],
+    .order-page .link[href*="order"],
+    .message-page .link[href*="message"],
+    .balance-page .link[href*="balance"],
+    .review-page .link[href*="review"]{
+        color: var(--maincolor) !important;
+        font-weight: bold;
+    }
+/* Active color style */
+
+/* sider section start */
+    .sider{
+        background-color: black;
+        padding: 20px 10px ;
+        position: sticky;
+        top: 0;
+    }
+    .sider .anyarthar{
+        color: var(--whitecolor);
+        font-family: "Irish Grover", system-ui;
+        margin-bottom: 30px;
+    }
+    .sider ul li{
+
+        border-bottom: 1px solid var(--navcolor);
+        margin-bottom: 10px;
+        padding-bottom: 7px;    
+    }
+    .sider ul li a{
+        text-decoration: none;
+        outline: none;
+        color: var(--whitecolor);
+        font-size: 16px;
+    }
+    .sider ul li a:hover{
+        color: var(--maincolor);
+    }
+    .sider ul li .icon {
+        color: var(--navcolor);
+    }
+    .sider .logout button{
+        border: none;
+        outline: none;
+        background: none;
+        color: var(--whitecolor);
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .sider .logout button:hover{
+        color: red;
+    }
+    .sider .logout .logouticon{
+        color: var(--navcolor);
+        font-size: 20px;
+    }
+/* sider section end */
+/* main section start */
+    .main{
+        padding: 10px 20px;
+    }
+        /* profile section start */
+            .adminrow{
+                position: sticky;
+                top: 10px;
+                
+            }
+            .adminpro{
+                box-shadow: 3px 3px 10px var(--navcolor);
+                border-radius: 10px;
+                padding: 10px 30px;
+                background-color: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(5px);
+            }
+            .adminpro .proimg{
+                width: 60px;
+                height: 60px;
+                margin-right: 20px;
+            }
+            .adminpro .proimg img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+
+            }
+            .adminpro .admindetial h5{
+                font-size: 16px;
+            }
+            .adminpro .admindetial h6{
+                font-size: 12px;
+                margin-bottom: 2px;
+            }
+        /* profile section end */
+        /* databox section start */
+            .card .icon{
+                font-size: 30px;
+                color: var(--navcolor);
+            }
+        /* databox section end */
+        /* users table section start */
+            .userlist .adduser{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .userlist .adduser:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+            .userlist .closebox{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .userlist .closebox:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+        /* users table section end */
+
+        /* product table section start */
+            .plist .addproduct{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .plist .addproduct:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+            .plist .closebox{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .plist .closebox:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+        /* product table section end */
+        /* category table section start */
+            .categorylist .addcategory{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .categorylist .addcategory:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+            .categorylist .closebox{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .categorylist .closebox:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+        /* category table section end */
+        /* order table section start */
+
+        /* order table section end */
+        /* best sellingtable section start */
+            .bestlist .addbestselling{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .bestlist .addbestselling:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+            .bestlist .closebox{
+                border: none;
+                outline: none;
+                color: var(--maincolor);
+                border-radius: 7px;
+                padding: 10px 20px;
+                border: 2px solid var(--maincolor);
+                background-color: var(--whitecolor);
+                transition: 0.4s;
+            }
+            .bestlist .closebox:hover{
+                background-color: var(--maincolor);
+                color: var(--whitecolor);
+                box-shadow: 3px 3px 10px var(--navcolor);
+            }
+        /* best selling table section end */
+        /* message table section start */
+
+        /* message table section end */
+/* main section end */

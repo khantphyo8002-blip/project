@@ -1,0 +1,302 @@
+    :root{
+        --maincolor: #ff8800;
+        --navcolor: #747474;
+        --whitecolor: #ffffff;
+        --shadowblack: #000000;
+    }
+/* cart section start */
+/* itembox sectiom start */
+    .buyerbox{
+        margin: 130px 0px 70px;
+    }
+    .itembox{
+        width: 870px;
+        box-shadow: 4px 4px 40px var(--navcolor);
+        border-radius: 10px;
+        padding: 10px;
+        height: 100%;
+    }
+    .itembox .shoppingcart{
+        font-size: 24px;
+        border-bottom: 1px solid var(--navcolor);
+        padding-bottom: 10px;
+    }
+    .itembox table{
+        width: 100%;
+    }
+    .itembox table tr{
+        border-bottom: 1px solid var(--navcolor);
+    }
+    .itembox table tr th,
+    .itembox table tr td{
+        padding: 10px;
+    }
+    .itembox table tr th{
+        font-size: 16px;
+    }
+    .itembox table tr th button{
+        border: none;
+        outline: none;
+        background: none;
+        color: aqua;
+    }
+
+    .itembox table tr td img{
+        width: 80;
+        height: 70px;
+        border-radius: 5px;
+    }
+    .itembox table tr td {
+        font-size: 16px;
+    }
+    .itembox table tr .price{
+        color: var(--maincolor);
+    }
+    .itembox table tr .price input{
+        color: var(--maincolor);
+        width: 85px;
+        font-weight: 500;
+        font-size: 20px;
+        border: none;
+        outline: none;
+    }
+    .itembox table tr .number{
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 23px;
+        border: 1px solid var(--navcolor);
+        height: 30px;
+    }
+    .itembox table tr .incre{
+        width: 35px;
+        height: 30px;
+        background-color: var(--whitecolor);
+        border: 1px solid var(--navcolor);
+    }
+    .itembox table tr .incre:hover{
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        border: 1px solid var(--maincolor);
+    }
+    .itembox table tr .incre button:hover{
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        border: 1px solid var(--maincolor);
+    }
+
+    .itembox tr td button{
+        border: none;
+        outline: none;
+        background: none;
+      }
+    .itembox tr td button .deleteicon{
+        color: red;
+    }
+    /* .tbody .tdtitle{
+        font-family: "W01Arthouse";
+    } */
+    .continue{
+        margin: 30px 0px 20px;
+    }
+    .continue a{
+        text-decoration: none;
+        outline: none;
+        color: var(--maincolor);
+        border: 1.5px solid var(--maincolor);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.5s;
+    }
+    .continue a:hover{
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+    }
+/* itembox sectiom end */
+/* totalbox sectiom start */
+    /* .totalbox{
+        width: 280px; 
+        margin-left: 25px;
+        box-shadow: 4px 4px 40px var(--navcolor);
+        border-radius: 10px;
+        padding: 10px;
+        height: 100%;
+        position: sticky;
+        top: 130px;
+    }
+    .totalbox .amountbox{
+        border-bottom: 1px solid var(--navcolor);
+        margin-top: 20px;
+        padding: 0px 10px;
+    }
+    .totalbox .totalamount{
+        font-size: 24px;
+        border-bottom: 1px solid var(--navcolor);
+        padding-bottom: 10px;
+    }
+    .totalbox .amounttext h6{
+        color: var(--navcolor);
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .totalbox .amountnumber h6{
+        color: var(--navcolor);
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .totalbox .amountnumber h6 span{
+        font-size: 20px; 
+        font-weight: 500; 
+        color: var(--shadowblack); 
+        margin-right: 5px;
+    }
+    .alltotalbox{
+        padding: 0px 10px;
+        margin: 10px 0px;
+    }
+    .alltotalbox .left h5{
+        font-size: 20px;
+        font-weight: 500;
+        color: #ff8800;
+    }
+    .alltotalbox .right h5{
+        color: var(--maincolor);
+        font-size: 16px;
+    }
+    .alltotalbox .right span{
+        font-size: 22px; 
+        font-weight: 500; 
+        margin-right: 5px;
+    }
+    .ordernow{
+        margin: 25px 0px 20px;
+    }
+    .ordernow button{
+        border: none;
+        outline: none;
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        padding: 8px 24px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+      .ordernow button:hover{
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px var(--navcolor);
+        background-color: var(--whitecolor);
+        color: var(--maincolor);
+    } */
+    .totalbox{
+        width: 290px; 
+        margin-left: 25px;
+        box-shadow: 4px 4px 40px var(--navcolor);
+        border-radius: 10px;
+        padding: 10px;
+        height: 100%;
+        position: sticky;
+        top: 80px;
+    }
+    .totalbox .amountbox{
+        border-bottom: 1px solid var(--navcolor);
+        margin-top: 20px;
+        padding: 0px 5px;
+    } 
+    .totalbox .totalamount{
+        font-size: 24px;
+        border-bottom: 1px solid var(--navcolor);
+        padding-bottom: 10px;
+    }
+    .totalbox .amounttext h6{
+        color: var(--navcolor);
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .totalbox .amounttext h6 input{
+        border: none;
+        outline: none;
+        width: 50%;
+        font-weight: 500;
+        font-size: 17px;
+    }
+    .totalbox .amounttext .sp1{
+        margin-left: 34px;
+    }
+    .totalbox .amounttext .sp2{
+        margin-left: 35px;
+    } 
+    .alltotalbox{
+        padding: 0px 10px;
+        margin: 10px 0px;
+    }
+    .alltotalbox .left h5{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .alltotalbox .left h5 input{
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        width: 50%;
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--maincolor);
+    }
+    .ordernow{
+        margin: 25px 0px 20px;
+    }
+    .ordernow button{
+        border: none;
+        outline: none;
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        padding: 8px 24px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+      .ordernow button:hover{
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px var(--navcolor);
+        background-color: var(--whitecolor);
+        color: var(--maincolor);
+    }
+/* totalbox sectiom end */
+    .ordernow a{
+        border: none;
+        outline: none;
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        padding: 8px 24px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .ordernow a:hover{
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px var(--navcolor);
+        background-color: var(--whitecolor);
+        color: var(--maincolor);
+    }
+    .emptycart a{
+        text-decoration: none;
+        outline: none;
+        background-color: var(--maincolor);
+        color: var(--whitecolor);
+        padding: 15px 47px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .emptycart a:hover{
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px var(--navcolor);
+        background-color: var(--whitecolor);
+        color: var(--maincolor);
+    }
+/* cart section end */

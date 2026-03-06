@@ -1,0 +1,262 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+        :root{
+            --maincolor: #ff8800;
+            --navcolor: #747474;
+            --whitecolor: #ffffff;
+            --shadowblack: #000000;
+        }
+    /* home all section start */
+        /* home1 section start */
+        .home{
+            /* background: url("./projectphoto/home\ bg.jpg");
+            width: 100%;
+            height: 100vh; */
+            background-image: url("./projectphoto/home\ bg.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 110vh;
+            opacity: 80%;
+        }
+        .hometext .text{
+            margin-top: 120px;
+        }
+        .hometext h4{
+            font-family: "W72ArtHouse";
+            color: var(--whitecolor);
+            font-size: 31px;
+            letter-spacing: 2%;
+            line-height: 56px;
+            transition: 0.3s;
+        }
+        .hometext h4:hover{
+            transform: translate(2px, -3px);
+            color: var(--maincolor);
+        }
+        .hometext .headtext{
+            color: var(--maincolor);
+            font-size: 41px;
+        }
+        .home .hometext button{
+            font-family: "W64ArtHouse";
+            border: none;
+            outline: none;
+            background-color: var(--maincolor);
+            color: var(--whitecolor);
+            font-size: 31px;
+            border-radius: 15px;
+            padding: 0px 27px;
+            margin-top: 20px;
+            border: 2px solid var(--maincolor);
+            transition: 0.3s;
+        }
+        .hometext button:hover{
+            background: none;
+            color: var(--maincolor);
+            background-color: rgb(255, 255, 255, 0.1);
+        }
+        .home .hometext .text a{
+            font-family: "W64ArtHouse";
+            text-decoration: none;
+            outline: none;
+            background-color: var(--maincolor);
+            color: var(--whitecolor);
+            font-size: 31px;
+            border-radius: 15px;
+            padding: 14px 27px;
+            margin-top: 20px;
+            border: 2px solid var(--maincolor);
+            transition: 0.3s;
+        }
+        .home .hometext .text a:hover{
+            background: none;
+            color: var(--maincolor);
+            background-color: rgb(255, 255, 255, 0.1);
+        }
+        /* home1 section end */
+        /* home2 section start */
+        .main .maintitle{
+            font-family: "W64ArtHouse";
+            font-size: 48px;
+            text-shadow: 2px 3px 7px var(--maincolor);
+            margin: 70px 0px;
+        }
+        .main .imgbox .img1{
+            width: 350px;
+            height: 450px;
+            position: relative;
+            border-radius: 100px 15px 15px 15px;
+            box-shadow: -3px -3px 100px var(--navcolor);
+            transition: 0.8s;
+        }
+        .main .imgbox .img1:hover{
+            transform: translate(-20px , -50px);
+            box-shadow: -2px -2px 10px var(--maincolor);
+        }
+        .main .imgbox .img2{
+            width: 350px;
+            height: 450px;
+            position: relative;
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+        .main .imgbox .img2:hover{
+            transform: scale(1.1);
+            box-shadow: 4px 4px 10px var(--maincolor);
+        }
+        .main .imgbox .img3{
+            width: 350px;
+            height: 450px;
+            position: relative;
+            border-radius: 15px 15px 100px 15px;
+            box-shadow: 5px 5px 100px var(--navcolor);
+            transition: 0.8s;
+        }
+        .main .imgbox .img3:hover{
+            transform: translate(20px , 40px);
+            box-shadow: 3px 3px 10px var(--maincolor);
+        }
+        .main .imgbox .img1 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100px 15px 15px 15px;
+        }.main .imgbox .img2 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }.main .imgbox .img3 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px 15px 100px 15px;
+        }
+        .imgbox p{
+            font-family: "W01ArtHouse";
+            font-size: 24px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+        .imgbox .detailtext{
+            position: absolute;
+            bottom: 90px;
+            background-color: rgba(184, 184, 184, 0.7);
+            height: 150px;
+            padding: 10px 5px;
+        }
+        /* home2 section end */
+        /* home3 section start */
+        .home3{
+            margin: 90px 150px;
+        }
+        .home3 .home3img{
+            width: 280px;
+            height: 350px;
+        }
+        .home3 .home3img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            box-shadow: 3px 4px 50px var(--navcolor);
+            box-shadow: -4px -4px 20px var(--navcolor);
+            transition: 0.8s;
+        }
+        .home3 .home3img img:hover{
+            transform: scale(1.1);
+            box-shadow: 10px 10px 150px 20px var(--maincolor);
+        }
+        .home3 .home3text h4{
+            font-family: "W01ArtHouse";
+            font-size: 25px;
+            transition: 0.3s;
+        }
+        .home3 .home3text h5{
+            font-family: "W01ArtHouse";
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        .home3 .home3text h4:hover,
+        .home3 .home3text h5:hover{
+            color: var(--maincolor);
+            transform: scale(1.1);
+        }
+        /* home3 section end */
+        /* home card section start */
+         .card{
+            box-shadow: 4px 4px 10px var(--navcolor);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .card:hover{
+            transform: translate(2px, -3px);
+            box-shadow: 5px 5px 30px var(--navcolor);
+        }
+        .card .cardbox{
+            padding: 10px 20px;
+            
+        }
+        .card .title{
+            font-size: 20px;
+            margin-bottom: 0px;
+            font-family: "W01Arthouse";
+        }
+        .card .proheart{
+            border: none;
+            outline: none;
+            background-color: var(--whitecolor);
+        }
+        .card .text{
+            font-size: 12px;
+            margin-bottom: 2px;
+            color: var(--navcolor);
+        }
+        .card .weight{
+            font-size: 15px;
+            margin-bottom: 0px;
+            color: var(--navcolor);
+        }
+        .card .price{
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--navcolor);
+        }
+        .card .addtocart{
+            border: none;
+            outline: none;
+            border: 2px solid var(--maincolor);
+            border-radius: 15px;
+            font-size: 16px;
+            padding: 5px 18px;
+            background-color: var(--whitecolor);
+            transition: 0.3s;
+        }
+        .card .addtocart:hover{
+            background-color: var(--maincolor);
+            color: var(--whitecolor);
+            transform: scale(1.1);
+        }
+        .viewmore button{
+            border: none;
+            outline: none;
+            color: var(--whitecolor);
+            background-color: var(--maincolor);
+            font-size: 16px;
+            padding: 9px 90px;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+        .viewmore button:hover{
+            transform: scale(1.1);
+            box-shadow: 3px 3px 20px var(--navcolor);
+        }
+        .bestselling{
+            font-family: "W64ArtHouse";
+            font-size: 48px;
+            text-shadow: 2px 3px 7px var(--maincolor);
+        }
+        .bestsellingbox{
+            margin-bottom: 80px;
+        }
+        /* home card section end */
+    /* home all section end */
