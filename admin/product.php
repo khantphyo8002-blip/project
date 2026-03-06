@@ -1,6 +1,18 @@
 <?php
 
+    session_start();
     include('db.php');
+    $adminname = "";
+    if(isset($_SESSION["admin_id"])){
+        $adminid = $_SESSION['admin_id'];
+        $getusername = "SELECT * FROM user WHERE user_id = '$adminid'";
+        $res11 = mysqli_query($conn, $getusername);
+        $admindata = mysqli_fetch_array($res11);
+        if($admindata){
+            $adminname = $admindata['user_name'];
+            $adminemail = $admindata['user_email'];
+        }
+    }
 
     if(isset($_POST['save'])){
         $proimg = $_POST['proimg'];
@@ -80,9 +92,9 @@
                                     <img src="./projectphoto/profile photo1.png" alt="">
                                 </div>
                                 <div class="admindetial">
-                                    <h5>Admin Name: Aung Khant Phyo</h5>
+                                    <h5>Admin Name: <?php echo $adminname ?></h5>
                                     <h6>Role: Administrator</h6>
-                                    <h6>Gmail: aungkhantphyo2234@gmail.com</h6>
+                                    <h6>Gmail: <?php echo $adminemail ?></h6>
                                 </div>
                             </div>
                         </div>

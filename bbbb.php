@@ -30,14 +30,18 @@
 // }
 ?>
 <form action="" method="post">
-    <select name="num" onchange="this.form.submit()">
+    <select name="num">
         <option value="22">22</option>
         <option value="11">11</option>
     </select>
+    <input type="text" name="text" id="">
 </form>
 
 <?php 
-
+if(isset($_POST['text'])){
+    $text = $_POST['text'];
+    echo $text;
+}
 $num = "22";
 if(isset($_POST['num'])){
     $num = $_POST['num'];

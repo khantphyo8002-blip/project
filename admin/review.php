@@ -1,5 +1,17 @@
 <?php
-include("db.php");
+    session_start();
+    include('db.php');
+    $adminname = "";
+    if(isset($_SESSION["admin_id"])){
+        $adminid = $_SESSION['admin_id'];
+        $getusername = "SELECT * FROM user WHERE user_id = '$adminid'";
+        $res11 = mysqli_query($conn, $getusername);
+        $admindata = mysqli_fetch_array($res11);
+        if($admindata){
+            $adminname = $admindata['user_name'];
+            $adminemail = $admindata['user_email'];
+        }
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,7 +31,7 @@ include("db.php");
                     <h2 class="anyarthar">A Nyar Thar</h2>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-black">
-                            <i class="icon fa-solid fa-chart-bar me-2"></i><a class="link" href="./dashboard.php">Dashboard</a>
+                            <i class="icon fa-solid fa-chart-bar me-2"></i><a class="link" href="./index.php">Dashboard</a>
                         </li>
                         <li class="list-group-item bg-black">
                             <i class="icon fa-solid fa-users me-2"></i></i><a class="link" href="./users.php">Users</a>
@@ -58,9 +70,9 @@ include("db.php");
                                     <img src="./projectphoto/profile photo1.png" alt="">
                                 </div>
                                 <div class="admindetial">
-                                    <h5>Admin Name: Aung Khant Phyo</h5>
+                                    <h5>Admin Name: <?php echo $adminname ?></h5>
                                     <h6>Role: Administrator</h6>
-                                    <h6>Gmail: aungkhantphyo2234@gmail.com</h6>
+                                    <h6>Gmail: <?php echo $adminemail ?></h6>
                                 </div>
                             </div>
                         </div>
