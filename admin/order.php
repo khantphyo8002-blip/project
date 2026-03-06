@@ -137,14 +137,14 @@
                                             <th>No</th>
                                             <th>ID</th>
                                             <th>Date</th>
-                                            <th>Customer Nmae</th>
+                                            <th>Cus_Nmae</th>
                                             <th>Phone</th>
                                             <th>Address</th>
-                                            <th>Product Name</th>
+                                            <th>Pro_Name</th>
                                             <th>Qty</th>
-                                            <th>Price</th>
-                                            <th>Total Price</th>
-                                            <th>Acton</th>
+                                            <th>Subtotal</th>
+                                            <th>final total</th>
+                                            <th>Actoin</th>
                                         </tr>
                                     </thead>
                                     <tbody>
