@@ -11,13 +11,9 @@
         $res = mysqli_query($conn, $postrev);
         if($res){
            echo "<script>alert('Your review was posted successfully')</script> ";
+        }
     }
-    }
-    
-    
-
 ?>
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -53,7 +49,8 @@
             margin-bottom: 20px;
         }
         .review h6{
-            font-size: 20px;
+            font-size: 17px;
+            line-height: 26px;
         }
         .reviewbox .writereview{
             border: none;
@@ -143,7 +140,7 @@
             ?>
                 <div class="review d-flex ">
                     <div class="profileimg">
-                        <img src="./projectphoto/profile photo1.png" alt="">
+                        <img src="./projectphoto/Anyar thar1.png" alt="">
                     </div>
                     <div>
                         <h4><?php echo $revdata['user_name']; ?></h4>

@@ -16,6 +16,26 @@
         header("Location: ../home.php");  
         exit();
     }
+
+    $countuser = "SELECT COUNT(*) as usertotal FROM user;";
+    $res11 = mysqli_query($conn, $countuser);
+    $user1 = mysqli_fetch_array($res11);
+    $totaluser = $user1['usertotal'];
+
+    $countpro = "SELECT COUNT(*) as prototal FROM product;";
+    $res22 = mysqli_query($conn, $countpro);
+    $product2 = mysqli_fetch_array($res22);
+    $prototal = $product2['prototal'];
+
+    $countincome = "SELECT sum(final_total) as incomebal FROM orders;";
+    $res33 = mysqli_query($conn, $countincome);
+    $inconme33 = mysqli_fetch_array($res33);
+    $incomebal = $inconme33['incomebal'];
+
+    $countorder = "SELECT COUNT(*) as ordertotal FROM orders;";
+    $res44 = mysqli_query($conn, $countorder);
+    $order44 = mysqli_fetch_array($res44);
+    $ordertotal = $order44['ordertotal'];
 ?>
 
 <!doctype html>
@@ -93,7 +113,7 @@
                                     </div>
                                     <div>
                                         <h5>Total Users</h5>
-                                        <h5>12</h5>
+                                        <h5><?php echo $totaluser ?></h5>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +126,7 @@
                                     </div>
                                     <div>
                                         <h5>Total Product</h5>
-                                        <h5>12</h5>
+                                        <h5><?php echo $prototal ?></h5>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +139,7 @@
                                     </div>
                                     <div>
                                         <h5>Total Order</h5>
-                                        <h5>12</h5>
+                                        <h5><?php echo $ordertotal ?></h5>
                                     </div>
                                 </div>
                             </div>
@@ -131,8 +151,8 @@
                                         <i class="icon fa-solid fa-money-bill-1-wave"></i>
                                     </div>
                                     <div>
-                                        <h5>Balance</h5>
-                                        <h5>1200000</h5>
+                                        <h5>Income Balance</h5>
+                                        <h5><?php echo $incomebal ?></h5>
                                     </div>
                                 </div>
                             </div>
