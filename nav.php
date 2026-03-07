@@ -149,7 +149,7 @@
                         </div>
                         <a class="icon1 nav-link me-2" href="./favsnack.php"><i class="heart fa-solid fa-heart"></i></a>
                         <div class="position-relative">
-                            <a class="icon2 nav-link me-4" href="cart.php"><i class="basket fa-solid fa-cart-shopping  "><span class=" position-absolute top-0 start-50 translate-middle badge rounded rounded-circle bg-danger" id= "noti" style="font-size: 10px;">
+                            <a class="icon2 nav-link me-4" href="cart.php"><i class="basket fa-solid fa-cart-shopping  "><span class=" position-absolute top-0 start-50 translate-middle badge rounded rounded-circle" id= "noti" style="font-size: 10px;">
                                                                                                                     
                                                                                                                   </span></i></a>
                         </div>  

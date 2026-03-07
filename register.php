@@ -1,5 +1,5 @@
 <?php
-
+    include("nav.php");
     include("db.php");
 
     if(isset($_POST['save'])){
@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="./singin-up.css">
     </head>
     <body>
-        <div class="registerbox d-flex justify-content-center align-items-center">
+        <div class="registerbox d-flex justify-content-center align-items-center" style="margin-top: 100px;">
             <div class="register d-flex">
                 <div class="registerfrom ">
                     <div class="text-center">

@@ -1,7 +1,7 @@
 <?php
-    session_start();
-  
-    include("db.php");
+    // session_start();
+    include("nav.php");
+    // include("db.php");
 
     if(isset($_POST['save'])){
         $name = $_POST['uname'];
@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="./singin-up.css">
     </head>
     <body>
-        <div class="registerbox d-flex justify-content-center align-items-center">
+        <div class="registerbox d-flex justify-content-center align-items-center" style="margin-top: 100px;">
             <div class="register d-flex" >
                 <div class="registerimg">
                         <img src="./projectphoto/login.jpg" alt="">
