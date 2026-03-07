@@ -5,7 +5,7 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
 
-        $getbaldata = "SELECT balance.*, product.pro_name FROM balance LEFT JOIN product ON balance.pro_id = product.pro_id WHERE balance.bal_id = 1;";
+        $getbaldata = "SELECT balance.*, product.pro_name FROM balance LEFT JOIN product ON balance.pro_id = product.pro_id WHERE balance.bal_id = $id;";
         $getdata = mysqli_query($conn, $getbaldata);
         $baldata = mysqli_fetch_array($getdata);
     }

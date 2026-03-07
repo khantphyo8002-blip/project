@@ -115,10 +115,10 @@
                         <img src="./projectphoto/peanut1.jpg" class="card-img-top" alt="..." style="height: 250px;">
                         <div class="cardbox">
                             <div class="d-flex justify-content-between align-items-center">
-                                <p class="title card-title">ajryJ,dk </p>
+                                <p class="title card-title">မြေပဲယို</p>
                                 <button class="proheart"><i class="fa-solid fa-heart"></i></button>
                             </div>
-                            <p class="text card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card</p>
+                            <p class="text card-text" style="font-size: 12px;">မြေပဲနှင်ံ ထန်းလျက်တို့ရောစပ်ပြုလုပ်ထားသော အစာပြေအစားစာလေး</p>
                             <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">500 </span>g</p>
                             <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 10000 </span><span>mmk</span></p>
                             <button class="addtocart" onclick="addtocart()">Add To Cart</button>
@@ -127,45 +127,45 @@
                 </div>   
                 <div class="col-lg-3 col-md-3">
                     <div class="card">
-                        <img src="./projectphoto/peanut1.jpg" class="card-img-top" alt="..." style="height: 250px;">
+                        <img src="./projectphoto/pauk pauk.jpg" class="card-img-top" alt="..." style="height: 250px;">
                         <div class="cardbox">
                             <div class="d-flex justify-content-between align-items-center">
-                                <p class="title card-title">ajryJ,dk </p>
+                                <p class="title card-title">ပေါက်ပေါက်ဆုတ်</p>
                                 <button class="proheart"><i class="fa-solid fa-heart"></i></button>
                             </div>
-                            <p class="text card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card</p>
-                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">500 </span>g</p>
-                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 10000 </span><span>mmk</span></p>
+                            <p class="text card-text" style="font-size: 12px;">ပေါ်က်ပေါက်နှင့် ထန်းလျက်သုံးပြုလုပ်ထားသော ရိုးရာအစားစာ</p>
+                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">200 </span>g</p>
+                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 17000 </span><span>mmk</span></p>
                             <button class="addtocart" onclick="addtocart()">Add To Cart</button>
                         </div>
                     </div>
                 </div>                
                 <div class="col-lg-3 col-md-3">
                     <div class="card">
-                        <img src="./projectphoto/peanut1.jpg" class="card-img-top" alt="..." style="height: 250px;">
+                        <img src="./projectphoto/salaykhawee.jpg" class="card-img-top" alt="..." style="height: 250px;">
                         <div class="cardbox">
                             <div class="d-flex justify-content-between align-items-center">
-                                <p class="title card-title">ajryJ,dk </p>
+                                <p class="title card-title">စာလေးခွေ</p>
                                 <button class="proheart"><i class="fa-solid fa-heart"></i></button>
                             </div>
-                            <p class="text card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card</p>
-                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">500 </span>g</p>
-                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 10000 </span><span>mmk</span></p>
+                            <p class="text card-text" style="font-size: 12px;">ကုလားပဲစစ်စ်နှင့် ပြုလုပ်ထားပါသည်</p>
+                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">100 </span>g</p>
+                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 15000 </span><span>mmk</span></p>
                             <button class="addtocart" onclick="addtocart()">Add To Cart</button>
                         </div>
                     </div>
                 </div>   
                 <div class="col-lg-3 col-md-3">
                     <div class="card">
-                        <img src="./projectphoto/peanut1.jpg" class="card-img-top" alt="..." style="height: 250px;">
+                        <img src="./projectphoto/peanut sar.jpg" class="card-img-top" alt="..." style="height: 250px;">
                         <div class="cardbox">
                             <div class="d-flex justify-content-between align-items-center">
-                                <p class="title card-title">ajryJ,dk </p>
+                                <p class="title card-title">မြေပဲဆားလှော်</p>
                                 <button class="proheart"><i class="fa-solid fa-heart"></i></button>
                             </div>
-                            <p class="text card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card</p>
-                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">500 </span>g</p>
-                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 10000 </span><span>mmk</span></p>
+                            <p class="text card-text" style="font-size: 12px;">သန့်စင်သောမြေပဲများဖြင့်ပြုလုပ်ထားသော အစားစာ</p>
+                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">200 </span>g</p>
+                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 18000 </span><span>mmk</span></p>
                             <button class="addtocart" onclick="addtocart()">Add To Cart</button>
                         </div>
                     </div>

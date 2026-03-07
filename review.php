@@ -3,7 +3,7 @@
     $isLoggedIn = isset($_SESSION['user_id']) ? 1 : 0;
 
     if(isset($_POST['save'])){
-        $user_id = $id;
+        $user_id = $_SESSION['user_id'];
         $rev_des = $_POST['rev_text'];
 
         $postrev = "INSERT INTO review( user_id , rev_des )
