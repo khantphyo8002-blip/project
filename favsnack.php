@@ -87,23 +87,7 @@
         </div>
         <div class="container">
             <div class="favcard row mx-5">
-                <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="card">
-                        <img src="./projectphoto/peanut1.jpg" class="card-img-top" alt="..." style="height: 250px;">
-                        <div class="cardbox">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <p class="title card-title">ajryJ,dk </p>
-                                <button class="heart"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-                            <p class="text card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card</p>
-                            <p class="weight">Net weight: <span style="font-size: 16px; font-weight: 500; color: black;">500 </span>g</p>
-                            <p class="price"><span style="color: #ff8800;"><i class="fa-solid fa-money-bill-1-wave"></i></span><span style="font-size: 20px; color: black; font-weight: 400;"> 10000 </span><span>mmk</span></p>
-                            <button class="addtocart" onclick="addtocart()">Add To Cart</button>
-                        </div>
-                    </div>        
-                </div> -->
-                
-                
+                              
             </div>
             <!-- addtocart section start -->
                 <div class="card d-none w-25 text-center position-fixed top-50 start-50 translate-middle p-4 shadow-lg" id="box">
