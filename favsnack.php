@@ -86,8 +86,7 @@
             <h3 class="favtitle">My Fav Snack</h3>
         </div>
         <div class="container">
-            <div class="favcard row mx-5">
-                              
+            <div class="favcard row mx-5">                 
             </div>
             <!-- addtocart section start -->
                 <div class="card d-none w-25 text-center position-fixed top-50 start-50 translate-middle p-4 shadow-lg" id="box">
@@ -101,7 +100,6 @@
                 </div>
             <!-- addtocart section end -->
         </div>
-
         <script src="./fontend.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
